@@ -9,44 +9,30 @@ const questions = [
     "What is the capital of Iceland?"
 ];
 
-
+//presently, the problem is that each click runs checkAnswer, which only deals with the first question and will fail to allow the user to move on to further questions, must resolve
 /* function checkAnswer() {
-    if (question.textContent === questions[0]) {
-        questionOne();
-    } else if (question.textContent === questions[1]) {
-        questionTwo();
-    } else if (question.textContent === questions[2]) {
-        questionsThree();
-    } else if (question.textContent === questions[3]) {
-        questionsFour();
-    } else if (question.textContent === questions[4]) {
-        questionFive();
+    question.textContent = questions[0];
+    let userInput = input.value;
+    let davinciRegex = /(leonardo)?(\s)?da(\s)?vinci/i;
+    if (userInput.match(davinciRegex)) {
+        alert("Correct!");
+        checkTwo();
+    } else {
+        alert("Whoops, try again...");
     }
-}
+    input.value = "";
 
-    function questionOne() {
-        let userInput = input.value;
-        if (userInput === "") return;
-        let davinciRegex = /(leonardo)?(\s)?da(\s)?vinci/i;
-        if (userInput.match(davinciRegex)) {
-            alert("Correct! Four more to go.");
-            question.textContent = questions[1];
-        } else {
-            alert("Whoops, try again.");
-        }
-        input.value = "";
-    }
-
-    function questionTwo() {
-        let userInput = input.value;
+    function checkTwo() {
+        question = questions[1];
         let hazelnutRegex = /(a)?(\s)?hazelnut/i;
         if (userInput.match(hazelnutRegex)) {
-            alert("Correct! Three more to victory.")
+            alert("Correct!");
         } else {
-            alert("Have you really never had a Ferrero Rocher? Try again.");
+            alert("Nope.");
         }
-        input.value = "";  
     }
+}
 */
+
 
 button.addEventListener('click', checkAnswer);
