@@ -1,4 +1,3 @@
-const input = document.querySelector('input');
 const button = document.querySelector('button');
 let quizContainer = document.querySelector('.questions');
 const questions = [
@@ -84,14 +83,14 @@ showQuestions(questions, quizContainer);
 function showResults(questions, quizContainer){
 	
 	// gather answer containers from our quiz
-	var answerContainers = quizContainer.querySelectorAll('.answers');
+	let answerContainers = quizContainer.querySelectorAll('.answers');
 	
 	// keep track of user's answers
-	var userAnswer = '';
-	var numCorrect = 0;
+	let userAnswer = '';
+	let numCorrect = 0;
 	
 	// for each question...
-	for(var i=0; i<questions.length; i++){
+	for(let i=0; i < questions.length; i++){
 
 		// find selected answer
 		userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
@@ -100,7 +99,7 @@ function showResults(questions, quizContainer){
 		if(userAnswer===questions[i].correctAnswer){
 			// add to the number of correct answers
             numCorrect++;
-            answerContainers[i].style.color = 'green';
+            answerContainers[i].style.color = 'darkgreen';
 		}
 		// if answer is wrong or blank
 		else{

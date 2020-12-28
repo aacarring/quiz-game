@@ -21,23 +21,28 @@ header p {
     font-size: 1.5em;
     margin: 15px;
 }
+
 .questions {
-    margin-top: 7.5vh;
-}
-.questions p {
     font-style: italic;
-    font-size: 1.75em;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    font-size: 1.5em;
+} 
+.question {
+    margin-top: 10px;
 }
-.questions input {
-    margin-top: 2vh;
-    margin-bottom: 5vh;
+input {
+    margin-right: 10px;
 }
+label {
+    margin: 10px;
+    font-size: .75em;
+    font-style: normal;
+}
+
 .submit button {
-    width: 5vw;
+    min-width: 5vw;
     height: 5vh;
     margin: 0 auto;
+    margin-top: 20px;
     border-radius: 5px;
     border: 1px solid grey;
 }
